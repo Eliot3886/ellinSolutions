@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ellin Solutions | Digital & Tech Services</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ellinSolution.css">
+
+</head>
+<body class="text-gray-800">
+
+    <!-- Logo SVG (Inline Base64 from the uploaded image for single-file structure) -->
+    <!-- This SVG is a simplified, colored version of your circuit E logo -->
+    <div id="logo-svg" class="hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
+            <style>
+                .circuit-e { fill: var(--primary-color); }
+                .text-e { fill: #1f2937; /* Gray 800 */ }
+                .text-solutions { fill: var(--primary-color); }
+            </style>
+            <!-- Simplified Circuit-E path (replace with actual path if available, this is a placeholder) -->
+            <path d="M40,10 C 20,10 20,50 40,50 L 80,50 L 80,40 L 45,40 C 35,40 35,20 45,20 L 80,20 L 80,10 Z" class="circuit-e" transform="scale(0.8) translate(5, 5)"/>
+            
+            <!-- ELLIN SOLUTIONS Text -->
+            <text x="85" y="40" font-size="20" font-weight="800" font-family="Inter, sans-serif" class="text-e">ELLIN</text>
+            <text x="85" y="55" font-size="12" font-weight="600" font-family="Inter, sans-serif" class="text-solutions">SOLUTIONS</text>
+        </svg>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header id="navbar" class="sticky top-0 z-50 bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo/Branding -->
+                <a href="#home" class="text-2xl font-extrabold tracking-tight flex items-center space-x-2">
+                    <!-- SVG logo element generated via JS on load -->
+                    <span id="header-logo-container" class="w-10 h-10">
+                        <svg class="w-full h-full text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                            <!-- Placeholder 'E' for quick loading before JS runs -->
+                            <path fill="currentColor" d="M10 10 L40 10 L40 40 L10 40 Z M15 15 L35 15 L35 20 L15 20 Z M15 30 L35 30 L35 35 L15 35 Z"/>
+                        </svg>
+                    </span>
+                    <span class="text-gray-900 font-extrabold text-xl">ELLIN</span>
+                    <span class="text-primary font-semibold text-lg -ml-1">SOLUTIONS</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8 font-medium">
+                    <a href="#home" class="nav-link text-gray-700">HOME</a>
+                    <a href="#services" class="nav-link text-gray-700">SERVICES</a>
+                    <a href="#projects" class="nav-link text-gray-700">PROJECTS & GALLERY</a>
+                    <a href="#about" class="nav-link text-gray-700">ABOUT US</a>
+                    <a href="#contact" class="nav-link text-gray-700">CONTACT US</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden p-2 text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-inner pb-2">
+            <a href="#home" class="block py-2 px-4 text-sm text-gray-700 hover:bg-red-50">HOME</a>
+            <a href="#services" class="block py-2 px-4 text-sm text-gray-700 hover:bg-red-50">SERVICES</a>
+            <a href="#projects" class="block py-2 px-4 text-sm text-gray-700 hover:bg-red-50">PROJECTS & GALLERY</a>
+            <a href="#about" class="block py-2 px-4 text-sm text-gray-700 hover:bg-red-50">ABOUT US</a>
+            <a href="#contact" class="block py-2 px-4 text-sm text-gray-700 hover:bg-red-50">CONTACT US</a>
+        </div>
+    </header>
+
+    <!-- 1. HOME / Hero Section -->
+    <section id="home" class="section-padding bg-gray-900 text-white min-h-[80vh] flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-6xl font-extrabold mb-4 leading-tight">
+                Empowering Your Digital Presence
+            </h1>
+            <p class="text-xl text-red-300 mb-8 max-w-3xl mx-auto">
+                At Ellin Solutions, we turn challenges into opportunities through smart, reliable, and forward-thinking strategies.
+            </p>
+            <a href="#services" class="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-lg shadow-xl transition duration-300 transform hover:scale-105 inline-block" style="background-color: var(--primary-color);">
+                Explore Our Services
+            </a>
+            <!-- Placeholder for an illustrative graphic, using an E graphic -->
+            <div class="mt-16 flex justify-center">
+                <div class="w-24 h-24 sm:w-32 sm:h-32 p-4 rounded-full border-4 border-primary text-primary opacity-50 flex items-center justify-center">
+                    <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3 5h18v2H3zM3 11h18v2H3zM3 17h18v2H3z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. SERVICES Section -->
+    <section id="services" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-4 text-gray-900">Our Core Services</h2>
+            <p class="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                We provide a comprehensive range of technology and design solutions tailored to meet your unique needs.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service Card 1: Graphic Design -->
+                <div class="service-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-t-primary">
+                    <div class="text-4xl text-primary mb-4">&#9999;</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Graphic Design</h3>
+                    <p class="text-gray-500">Creating stunning visuals, branding, and marketing materials that capture attention and communicate your message effectively.</p>
+                </div>
+
+                <!-- Service Card 2: Web Development -->
+                <div class="service-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-t-primary">
+                    <div class="text-4xl text-primary mb-4">&#128187;</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Web Development</h3>
+                    <p class="text-gray-500">Building fast, responsive, and robust websites and custom web applications using modern frameworks and technologies.</p>
+                </div>
+
+                <!-- Service Card 3: Windows Installation & Activation -->
+                <div class="service-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-t-primary">
+                    <div class="text-4xl text-primary mb-4">&#128421;&#65039;</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Windows Installation & Activation</h3>
+                    <p class="text-gray-500">Professional setup and activation of Windows operating systems, ensuring optimal configuration and performance.</p>
+                </div>
+
+                <!-- Service Card 4: Microsoft Activation & Installation -->
+                <div class="service-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-t-primary">
+                    <div class="text-4xl text-primary mb-4">&#128450;&#65039;</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Microsoft Software Setup</h3>
+                    <p class="text-gray-500">Installation and correct activation of Microsoft Office and other essential Microsoft software packages.</p>
+                </div>
+                
+                <!-- Service Card 5: Drivers Installation and Update -->
+                <div class="service-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-t-primary">
+                    <div class="text-4xl text-primary mb-4">&#128295;</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Drivers Installation & Update</h3>
+                    <p class="text-gray-500">Keeping your hardware running smoothly with the latest, stable, and correct drivers installed and updated.</p>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. PROJECTS & GALLERY Section (Combined) -->
+    <section id="projects" class="section-padding bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-4 text-gray-900">Projects & Gallery</h2>
+            <p class="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                A selection of our recent work across web development, design, and security projects.
+            </p>
+
+            <div id="project-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1 (Web Development) -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden">
+                    <img src="https://placehold.co/600x400/CC3333/ffffff?text=Modern+Portfolio+Site" alt="Modern Portfolio Site" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900">Project Alpha: Portfolio Website</h3>
+                        <p class="text-gray-500 mb-4 text-sm">A full-stack development project focused on speed and user experience.</p>
+                        <a href="https://mockup-project-alpha.com" target="_blank" class="text-primary font-medium project-link">View Live Project &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 (Graphic Design) -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden">
+                    <img src="https://placehold.co/600x400/4B5563/ffffff?text=E-Commerce+Platform" alt="E-Commerce Platform" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900">Project Beta: E-Commerce Platform</h3>
+                        <p class="text-gray-500 mb-4 text-sm">Design and development of a scalable, secure online store.</p>
+                        <!-- Updated link to your provided GitHub portfolio link -->
+                        <a href="https://ellinsolutions.github.io" target="_blank" class="text-primary font-medium project-link">View Design Case Study &rarr;</a>
+                    </div>
+                </div>
+
+
+
+                <!-- Add more project examples as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. ABOUT US Section -->
+    <section id="about" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
+                <div class="lg:col-span-6 mb-8 lg:mb-0">
+                    <!-- Placeholder image with a clean design -->
+                    <img class="w-full rounded-xl shadow-2xl" src="https://placehold.co/600x400/CC3333/ffffff?text=Eliot+Chitowamombe+-+CEO" onerror="this.onerror=null;this.src='https://placehold.co/600x400/CC3333/ffffff?text=Eliot+Chitowamombe+-+CEO';" alt="Eliot Chitowamombe, CEO of Ellin Solutions.">
+                </div>
+                <div class="lg:col-span-6">
+                    <h2 class="text-3xl font-bold mb-4 text-gray-900">Meet Ellin Solutions</h2>
+                    <p class="text-lg text-gray-600 mb-4 font-semibold bold">
+                        "At Ellin Solutions, we turn challenges into opportunities through smart, reliable, and forward-thinking strategies."
+                    </p>
+                    <p class="text-lg text-gray-600 mb-6">
+                        We are led by Eliot Chitowamombe, Chief Executive Officer (CEO) , and a team of dedicated technology specialists committed to delivering high-quality digital solutions. Our philosophy centers on reliability, security, and exceptional user experience.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-6">
+                        From the intricate details of system installation to the broad strokes of web security and design, we ensure every project is handled with precision and expertise. We don't just solve problems; we build long-term digital foundations for your success.
+                    </p>
+                    <a href="#contact" class="text-primary font-medium hover:text-red-800 transition duration-150">Start a conversation today &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CONTACT US Section -->
+    <section id="contact" class="section-padding bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-4">Get In Touch</h2>
+            <p class="text-lg text-red-300 text-center mb-12 max-w-2xl mx-auto">
+                Ready to start your next project or need technical assistance? Contact us using the form below or our official details.
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Contact Form -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl">
+                    <h3 class="text-xl font-semibold mb-4 text-red-400">Send Us a Message</h3>
+
+                    <form action="https://formspree.io/f/xyzlplko" method="POST" id="contact-form" class="space-y-4">
+  
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-red-300 mb-1">Full Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg bg-gray-700 border-gray-600 text-white focus:ring-primary focus:border-primary">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-red-300 mb-1">Email Address</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg bg-gray-700 border-gray-600 text-white focus:ring-primary focus:border-primary">
+                        </div>
+                        <div>
+                            <label for="service" class="block text-sm font-medium text-red-300 mb-1">Interested Service</label>
+                            <select id="service" name="service" required class="w-full px-4 py-3 rounded-lg bg-gray-700 border-gray-600 text-white focus:ring-primary focus:border-primary">
+                                <option value="" disabled selected>Select a Service</option>
+                                <option value="graphic-design">Graphic Design</option>
+                                <option value="web-development">Web Development</option>
+                                <option value="windows-installation">Windows Installation & Activation</option>
+                                <option value="microsoft-software">Microsoft Software Setup</option>
+                                <option value="drivers-update">Drivers Installation & Update</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-red-300 mb-1">Message</label>
+                            <textarea id="message" name="message" rows="3" required class="w-full px-4 py-3 rounded-lg bg-gray-700 border-gray-600 text-white focus:ring-primary focus:border-primary"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-3 rounded-lg transition duration-300 shadow-lg transform hover:scale-[1.01]" style="background-color: var(--primary-color);">
+                            Send Message
+                        </button>
+                        <!-- Message container for form submission feedback -->
+                        <div id="form-message" class="mt-4 text-center hidden"></div>
+                    </form>
+                </div>
+                
+                <!-- Contact Details -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl space-y-6 flex flex-col justify-center">
+                    <h3 class="text-xl font-semibold mb-4 text-red-400">Our Official Details</h3>
+                    
+                    <div class="flex items-center space-x-4">
+                        <span class="text-3xl text-red-500">&#9742;</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">Call Us</p>
+                            <a href="tel:+263779933702" class="text-xl text-red-200 hover:text-red-400 transition">+263 77 993 3702</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-4">
+                        <span class="text-3xl text-red-500">&#9993;</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">Email Us</p>
+                            <a href="mailto:chitowamombeeliot00@gmail.com" class="text-base text-red-200 hover:text-red-400 transition break-all">chitowamombeeliot00@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-4">
+                        <span class="text-3xl text-red-500">&#127760;</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">Portfolio</p>
+                            <a href="https://Eliot3886.github.io/" target="_blank" class="text-base text-red-200 hover:text-red-400 transition">Eliot3886.github.io/</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-4">
+                        <span class="text-3xl text-red-500">&#128205;</span>
+                        <div>
+                            <p class="text-lg font-semibold text-white">Visit Our Office</p>
+                            <p class="text-base text-red-200">630 Churchill Ave, Harare</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400 text-sm">
+            <p>&copy; 2025 Ellin Solutions. All rights reserved.</p>
+            <p class="mt-2">Created by: Eliot Chitowamombe </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu and Form Handling -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelectorAll('#navbar a');
+            const contactForm = document.getElementById('contact-form');
+            const formMessage = document.getElementById('form-message');
+
+            // Set the SVG logo dynamically (for single-file integrity)
+            // Note: This needs to run before the logo is seen.
+            const headerLogoContainer = document.getElementById('header-logo-container');
+            const headerLogoSVG = document.getElementById('logo-svg').innerHTML;
+            if (headerLogoContainer) {
+                headerLogoContainer.innerHTML = headerLogoSVG;
+            }
+
+
+            // 1. Mobile Menu Toggle
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // 2. Smooth Scrolling and Mobile Menu Close
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    const href = link.getAttribute('href');
+                    if (href && href.startsWith('#')) {
+                        e.preventDefault();
+                        const targetId = href.substring(1);
+                        const targetElement = document.getElementById(targetId);
+
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - document.getElementById('navbar').offsetHeight,
+                                behavior: 'smooth'
+                            });
+                        }
+                        
+                        // Close mobile menu after clicking a link
+                        if (!mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+
+            // 3. Form Submission Handling (Non-functional mock)
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault(); // Stop the default form submission
+
+                if (contactForm.checkValidity()) {
+                    formMessage.classList.remove('hidden', 'text-red-400');
+                    formMessage.classList.add('text-red-400'); // Use red accent color for feedback
+                    formMessage.innerHTML = 'Sending...';
+
+                    // Simulate an API call delay
+                    setTimeout(() => {
+                        // Success message
+                        formMessage.innerHTML = 'Thank you for your message! We will get back to you shortly.';
+                        formMessage.classList.remove('text-red-400');
+                        formMessage.classList.add('text-green-400'); // Use green for success
+                        contactForm.reset(); // Clear the form
+                    }, 2000);
+                } else {
+                    formMessage.classList.remove('hidden');
+                    formMessage.classList.remove('text-green-400');
+                    formMessage.classList.add('text-red-400');
+                    formMessage.innerHTML = 'Please fill out all required fields correctly.';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
