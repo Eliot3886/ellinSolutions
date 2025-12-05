@@ -1,0 +1,56 @@
+
+        /* Define the primary color based on the Ellin Solutions logo (Red/Maroon) */
+        :root {
+            --primary-color: #CC3333; /* Darker Red/Maroon */
+            --primary-hover: #A31E1E;
+            --secondary-color: #f8fafc; /* Slate 50 */
+        }
+        
+        /* Custom CSS for a clean look */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            background-color: var(--secondary-color);
+        }
+        .section-padding {
+            padding: 5rem 1rem;
+        }
+        /* Custom styles for the navigation links */
+        .nav-link {
+            transition: color 0.3s;
+            position: relative;
+        }
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        /* Style for the service cards */
+        .service-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+        }
+        .project-link:hover {
+            text-decoration: underline;
+        }
+        /* Apply custom colors using utility classes */
+        .text-primary { color: var(--primary-color); }
+        .bg-primary { background-color: var(--primary-color); }
+        .hover\:bg-primary-dark:hover { background-color: var(--primary-hover); }
+        .border-t-primary { border-top-color: var(--primary-color); }
+    
